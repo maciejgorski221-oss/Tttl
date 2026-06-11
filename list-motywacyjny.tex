@@ -1,0 +1,231 @@
+% ============================================================
+%  List motywacyjny — Maciej Górski
+%  Styl dopasowany do cv-maciej-gorski.tex
+%  Kompilacja: XeLaTeX lub LuaLaTeX (zalecane)
+%  Overleaf:   Menu → Compiler → XeLaTeX
+%
+%  UWAGA: Jeśli nie masz fontu Inter, użyj Noto Sans:
+%    \setmainfont{Noto Sans}
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+% ---------- pakiety ----------
+\usepackage[polish]{babel}
+\usepackage{fontspec}
+\setmainfont{Inter}[
+  Extension      = .ttf,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+]
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage[scale=0.85]{geometry}
+\usepackage{parskip}
+\usepackage{setspace}
+\onehalfspacing
+
+% ---------- kolory (złoty akcent) ----------
+\definecolor{sidebar}{HTML}{0a0f1c}
+\definecolor{sidebarText}{HTML}{e2e8f0}
+\definecolor{goldAccent}{HTML}{e5b05c}
+\definecolor{goldDark}{HTML}{c9943a}
+\definecolor{mutedText}{HTML}{94a3b8}
+
+% ---------- hyperlinki ----------
+\hypersetup{colorlinks=true, urlcolor=goldAccent, linkcolor=goldAccent}
+
+% ---------- dokument ----------
+\begin{document}
+\thispagestyle{empty}
+
+% ======================== PASEK BOCZNY ========================
+\begin{tcolorbox}[
+  colback      = sidebar,
+  coltext      = sidebarText,
+  boxrule      = 0pt,
+  leftrule     = 0pt,
+  arc          = 0pt,
+  outer arc    = 0pt,
+  width        = 0.28\paperwidth,
+  left         = 0.8em,
+  right        = 0.8em,
+  top          = 2em,
+  bottom       = 2em,
+  after        = \hspace{0.5em},
+  nobeforeafter,
+  enhanced,
+  remember,
+]
+% ---- inicjały ----
+\vspace*{-0.5em}
+\begin{center}
+  \fcolorbox{goldAccent!60}{sidebar!90}{%
+    \parbox{3.2cm}{\centering\vspace{1.2cm}
+      {\fontsize{48}{48}\selectfont\bfseries\color{goldAccent} MG}\vspace{1.2cm}}
+  }
+\end{center}
+
+\vspace{0.6em}
+
+% ---- kontakt ----
+{\small\bfseries\color{goldAccent} \faIcon[regular]{envelope}\hspace{0.4em}KONTAKT}\\[0.25em]
+{\footnotesize
+\faIcon[regular]{envelope}\hspace{0.4em}\href{mailto:maciejgorski978@gmail.com}{maciejgorski978@gmail.com}\\[0.15em]
+\faIcon{phone-alt}\hspace{0.4em}+48 514 299 431\\[0.15em]
+\faIcon{map-marker-alt}\hspace{0.4em}Polska
+}
+
+\vspace{0.8em}
+
+% ---- online ----
+{\small\bfseries\color{goldAccent} \faIcon{globe}\hspace{0.4em}ONLINE}\\[0.25em]
+{\footnotesize
+\faIcon{github}\hspace{0.4em}\href{https://github.com/Gorski-Maciej}{github.com/Gorski-Maciej}\\[0.15em]
+\faIcon{linkedin}\hspace{0.4em}\href{https://linkedin.com/in/maciej-gorski-046176282}{LinkedIn}
+}
+
+\vspace{0.8em}
+
+% ---- języki ----
+{\small\bfseries\color{goldAccent} \faIcon{language}\hspace{0.4em}JĘZYKI}\\[0.25em]
+{\footnotesize
+\textbf{Polski} --- ojczysty\\[0.1em]
+\textbf{Angielski} --- B1/B2
+}
+
+\vspace{0.8em}
+
+% ---- kluczowe technologie ----
+{\small\bfseries\color{goldAccent} \faIcon{code}\hspace{0.4em}TECHNOLOGIE}\\[0.25em]
+{\footnotesize
+\setlength{\tabcolsep}{0.35em}
+\begin{tabular}{ll}
+\color{goldAccent}\textbullet & Python / FastAPI / Flask \\
+\color{goldAccent}\textbullet & Docker / Kubernetes \\
+\color{goldAccent}\textbullet & CI/CD / GitHub Actions \\
+\color{goldAccent}\textbullet & PostgreSQL / Redis / Kafka \\
+\color{goldAccent}\textbullet & Linux / Bash \\
+\color{goldAccent}\textbullet & React / Vite \\
+\color{goldAccent}\textbullet & AWS \\
+\end{tabular}
+}
+
+\vspace{0.8em}
+
+% ---- sieci ----
+{\small\bfseries\color{goldAccent} \faIcon{network-wired}\hspace{0.4em}SIEĆ}\\[0.25em]
+{\footnotesize
+\setlength{\tabcolsep}{0.35em}
+\begin{tabular}{ll}
+\color{goldAccent}\textbullet & TCP/IP, VLAN, OSPF \\
+\color{goldAccent}\textbullet & Cisco / GNS3 \\
+\color{goldAccent}\textbullet & Firewall / Wireshark \\
+\color{goldAccent}\textbullet & CCNA (w trakcie) \\
+\end{tabular}
+}
+
+\vspace{0.8em}
+
+% ---- kompetencje ----
+{\small\bfseries\color{goldAccent} \faIcon{users}\hspace{0.4em}KOMPETENCJE}\\[0.25em]
+{\footnotesize
+Analityczne myślenie\\[0.05em]
+Samodzielność\\[0.05em]
+Szybka nauka\\[0.05em]
+Odpowiedzialność\\[0.05em]
+Praca zespołowa
+}
+\end{tcolorbox}
+%
+\begin{minipage}[t]{0.68\paperwidth}
+\vspace{1.2em}
+\hspace{1.5em}
+\begin{minipage}[t]{0.9\textwidth}
+
+% ======================== NAGŁÓWEK ========================
+{\fontsize{28}{32}\selectfont\bfseries\color{sidebar} Maciej Górski\par}
+\vspace{0.15em}
+{\large\color{goldAccent!80!black} Student Informatyki \textbar\ Python Developer \textbar\ Network Enthusiast\par}
+
+\vspace{1.2em}
+
+% ---- miejsce i data ----
+{\small\color{mutedText}
+\faIcon{map-marker-alt}\hspace{0.3em}[Miejscowość], \today
+}
+
+\vspace{1.5em}
+
+% ---- dane adresata (do uzupełnienia) ----
+{\small
+\textbf{\faIcon{building}\hspace{0.3em}Dane adresata:}\\[0.3em]
+[Nazwa firmy]\\[0.1em]
+[Adres]\\[0.1em]
+[Kod pocztowy, Miasto]
+}
+
+\vspace{1.5em}
+
+% ---- tytuł ----
+\noindent{\large\bfseries\color{sidebar} List motywacyjny}
+
+\vspace{0.4em}
+\noindent\textbf{Dotyczy:} odpowiedź na ogłoszenie o staż / praktykę w obszarze IT
+
+\vspace{0.8em}
+
+% ---- treść ----
+Szanowni Państwo,\\[0.6em]
+
+z dużą satysfakcją odpowiadam na ogłoszenie o staż/praktykę w Państwa firmie. Jestem studentem pierwszego roku Informatyki (specjalizacja: administracja sieci i systemów) i poszukuję możliwości rozwoju w obszarach \textbf{Python, DevOps, administracja Linux} oraz \textbf{sieci komputerowe}. Państwa firma, jako lider w swojej branży, jest miejscem, w którym mógłbym łączyć swoją pasję do programowania z zainteresowaniem infrastrukturą IT.
+
+\vspace{0.4em}
+
+W ramach własnych projektów zrealizowałem cztery kompleksowe systemy mikrousługowe w architekturze Docker Compose:
+
+\begin{itemize}
+  \item \textbf{CloudBudget} --- platforma FinOps z FastAPI, PostgreSQL, Celery i React. System analizuje koszty chmurowe, generuje rekomendacje ML i udostępnia dashboard operatorski.
+  \item \textbf{NetGuardian} --- system SecOps/SIEM/SOAR wykorzystujący Kafka do ingestu zdarzeń, Redis do cache'owania, DuckDB do analizy i ML (scikit-learn) do detekcji anomalii. Zawiera enrichment GeoIP oraz automatyczne playbooki reakcji.
+  \item \textbf{NetAegis} --- dwuwarstwowa orkiestracja agentów w architekturze MCP (Model Context Protocol) z frontendem React i komunikacją WebSocket w czasie rzeczywistym.
+  \item \textbf{InfraFlow} --- platforma monitorowania infrastruktury z metrykami Prometheus i dashboardami Grafana.
+\end{itemize}
+
+Projekty te realizowałem samodzielnie, dbając o testy (pytest), dokumentację i ciągłą integrację (GitHub Actions). Każdy z nich pokazuje moją umiejętność pracy z nowoczesnym stackiem technologicznym: \textbf{FastAPI, Docker, PostgreSQL, Redis, Kafka, Prometheus, Grafana, React, CI/CD} oraz chmurą \textbf{AWS}.
+
+\vspace{0.4em}
+
+Równolegle rozwijam wiedzę sieciową --- przygotowuję się do certyfikacji \textbf{Cisco CCNA}, pracuję w GNS3 i Packet Tracer (VLAN, OSPF, ACL), a na co dzień używam Linuxa (Debian/Ubuntu), Bash i Git. Posiadam również praktyczne umiejętności z zakresu IoT, bezpieczeństwa IT oraz testowania oprogramowania.
+
+\vspace{0.4em}
+
+Cechuje mnie \textbf{analityczne myślenie, samodzielność i szybka nauka}. Potrafię efektywnie diagnozować problemy, dokumentować rozwiązania i pracować zarówno samodzielnie, jak i w zespole. Jestem otwarty na pracę hybrydową i zdalną.
+
+\vspace{0.4em}
+
+Chciałbym rozwijać się w Państwa firmie jako \textbf{Python Developer, specjalista IT Support / DevOps lub administrator sieci}. Gwarantuję pełne zaangażowanie, motywację do nauki i rzetelność w wykonywaniu powierzonych zadań.
+
+\vspace{0.4em}
+
+Będę wdzięczny za możliwość spotkania i rozmowy o moim potencjalnym udziale w projektach Państwa firmy.
+
+\vspace{1em}
+
+Z wyrazami szacunku,\\[0.4em]
+{\bfseries\color{sidebar} Maciej Górski}
+
+\vspace{0.2em}
+{\footnotesize\color{mutedText}
+\faIcon[regular]{envelope}\hspace{0.3em}\href{mailto:maciejgorski978@gmail.com}{maciejgorski978@gmail.com} \hspace{1em}
+\faIcon{phone-alt}\hspace{0.3em}+48 514 299 431 \hspace{1em}
+\faIcon{github}\hspace{0.3em}\href{https://github.com/Gorski-Maciej}{github.com/Gorski-Maciej}
+}
+
+\end{minipage}
+\end{minipage}
+
+\end{document}

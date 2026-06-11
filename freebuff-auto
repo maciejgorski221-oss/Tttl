@@ -1,0 +1,41 @@
+
+#!/bin/bash
+set -euo pipefail
+REPO_DIR="$(pwd)"
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "main")
+COMMIT_MSG_PREFIX="Freebuff: auto-commit"
+GREEN='\033[0;32m'; YELLOW='\033[1;33m'; RED='\033[0;31m'; NC='\033[0m'
+cd "$REPO_DIR"
+commit_local_changes() {
+    if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+echo -e "${YELLOW}📦 Niezapisane zmiany – zatwierdzam...${NC}"
+git add .
+local TS; TS=$(date +"%Y-%m-%d %H:%M:%S")
+        git commit -m "${COMMIT_MSG_PREFIX} [${TS}]" || echo -e "${YELLOW}⚠️  Commit zbędny${NC}"
+    else
+        echo -e "${GREEN}✅ Katalog roboczy czysty.${NC}"
+    fi
+}
+sync_with_github() {
+    echo -e "${YELLOW}🔄 Pobieram zmiany z GitHuba...${NC}"
+    if ! git pull origin "$BRANCH" --rebase; then
+echo -e "${RED}❌ Konflikt! Nadpisuję zdalne repozytorium lokalną wersją...${NC}"
+git rebase --abort 2>/dev/null || true
+git merge --abort 2>/dev/null || true
+git checkout "$BRANCH"
+        git reset --hard HEAD
+        git push origin "$BRANCH" --force
+echo -e "${GREEN}✅ Lokalne zmiany zostały wypchnięte (force push).${NC}"
+return
+fi
+echo -e "${YELLOW}📤 Wypycham na GitHub...${NC}"
+git push origin "$BRANCH"
+    echo -e "${GREEN}✅ Zmiany na GitHubie.${NC}"
+}
+echo -e "${GREEN}🔄 Aktualizuję repozytorium przed sesją...${NC}"
+sync_with_github
+trap 'echo -e "\n${YELLOW}⚠️  Przerwano. Zapisuję i synchronizuję...${NC}"; commit_local_changes; sync_with_github; exit 130' INT TERM
+echo -e "${GREEN}🚀 Uruchamiam Freebuff...${NC}"
+freebuff
+commit_local_changes
+sync_with_github
