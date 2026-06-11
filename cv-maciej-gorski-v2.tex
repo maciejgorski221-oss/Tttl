@@ -1,0 +1,220 @@
+% ============================================================
+%  CV — Maciej Górski  (wersja 2.0)
+%  Show, don't tell — konkrety zamiast banałów
+%  Kompilacja: XeLaTeX (Overleaf)
+%  Font: Lato (fallback: Fira Sans, Roboto, Noto Sans)
+% ============================================================
+\documentclass[a4paper,10pt]{article}
+
+% ---------- pakiety ----------
+\usepackage{fontspec}
+\setmainfont{Lato}
+\usepackage[margin=1.7cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+
+% ---------- kolory (inspirowane G-rski_Maciej.github.io) ----------
+\definecolor{navy}{HTML}{0a0f1c}
+\definecolor{gold}{HTML}{e5b05c}
+\definecolor{goldDark}{HTML}{c9943a}
+\definecolor{graytext}{HTML}{64748b}
+
+
+% ---------- hyperlinki ----------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=goldDark,
+  linkcolor=navy,
+}
+
+% ---------- styl sekcji ----------
+\titleformat{\section}
+  {\Large\bfseries\color{navy}}
+  {}{0pt}
+  {}[\vspace{-0.4em}\color{gold!60!black}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ---------- komendy pomocnicze ----------
+\newcommand{\tech}[2]{\textbf{#1}: #2}
+\newcommand{\projecttitle}[1]{\textbf{\large #1}}
+\newcommand{\dateline}[2]{\textcolor{graytext}{#1} & #2 \\}
+
+% ---------- odstępy ----------
+\linespread{1.12}
+\setlist{leftmargin=*,nosep}
+\setlist[itemize]{leftmargin=*,nosep, before={\vspace{0.2em}}, after={\vspace{0.2em}}}
+\setlength{\parskip}{0.3em}
+
+% ---------- dokument ----------
+\begin{document}
+
+% ======================== NAGŁÓWEK ========================
+\begin{center}
+  {\fontsize{26}{30}\selectfont\bfseries\color{navy} Maciej Górski\par}
+  \vspace{0.15em}
+  {\large\color{goldDark} Junior Python Developer \textbar\ DevOps \textbar\ Network Enthusiast\par}
+  \vspace{0.4em}
+  {\small\color{graytext}
+  \faEnvelope\ \href{mailto:maciejgorski978@gmail.com}{maciejgorski978@gmail.com} \hspace{0.8em}
+  \faPhone\ +48 514 299 431 \hspace{0.8em}
+  \faMapMarker\ Polska (hybrydowo / zdalnie / stacjonarnie)
+  }
+  \par\vspace{0.15em}
+  {\small\color{graytext}
+  \faGithub\ \href{https://github.com/Gorski-Maciej}{github.com/Gorski-Maciej} \hspace{0.8em}
+  \faLinkedin\ \href{https://linkedin.com/in/maciej-gorski-046176282}{LinkedIn}
+  }
+\end{center}
+\vspace{0.2em}
+{\color{gold!40!black}\rule{\textwidth}{0.3pt}}
+\vspace{0.6em}
+
+% ======================== O MNIE ========================
+\section{O mnie}
+
+\small
+\textbf{Python Developer i entuzjasta DevOps}, student informatyki (spec. administracja sieci i systemów), który w ciągu 12 miesięcy przeszedł od pierwszych skryptów w Pythonie do samodzielnego wdrażania wielokontenerowych systemów na AWS z pełnym pipeline'em CI/CD.
+
+\vspace{0.2em}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Python:} programowanie obiektowe, struktury danych (własna HashTable z obsługą kolizji), algorytmy rekurencyjne, testy jednostkowe (pytest), FastAPI (REST API z JWT auth)
+  \item \textbf{DevOps:} Docker (Dockerfile, docker-compose, obrazy wieloetapowe) $\rightarrow$ Kubernetes (manifesty YAML, serwisy, deploymenty) $\rightarrow$ CI/CD (GitHub Actions, automatyzacja buildów/testów) $\rightarrow$ AWS (EC2, S3, IAM)
+  \item \textbf{Sieci:} TCP/IP, DNS, DHCP, VLAN, routing OSPF/RIP -- przygotowanie do certyfikacji \textbf{Cisco CCNA} (planowane podejście: Q3 2026)
+  \item \textbf{Linux:} administracja Debian/Ubuntu, skrypty Bash, automatyzacja zadań (cron), diagnostyka systemu
+  \item Samodzielnie zrealizowałem 4 kompleksowe systemy mikrousługowe (CloudBudget, NetGuardian, NetAegis, InfraFlow) -- każdy z testami, dokumentacją i CI/CD
+\end{itemize}
+
+\vspace{0.4em}
+
+% ======================== STACK TECHNOLOGICZNY ========================
+\section{Stack technologiczny}
+
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{>{\bfseries\color{navy}}p{3.8cm} X}
+\textcolor{gold}{$\blacktriangleright$} Języki i Backend &
+  \tech{Python}{OOP, FastAPI, Flask, Pandas, SQLAlchemy, pytest, serializacja JSON, algorytmy} \\
+  & \tech{Bash}{skrypty administracyjne, automatyzacja zadań, zarządzanie procesami} \\
+\textcolor{gold}{$\blacktriangleright$} DevOps i Chmura &
+  \tech{Docker}{Dockerfile, docker-compose, obrazy wieloetapowe, konteneryzacja aplikacji} \\
+  & \tech{Kubernetes}{manifesty YAML, serwisy, deploymenty, secrets, ConfigMap} \\
+  & \tech{CI/CD}{GitHub Actions -- pipeline'y build, test, deploy} \\
+  & \tech{AWS}{EC2, S3, IAM, rejestry obrazów} \\
+\textcolor{gold}{$\blacktriangleright$} Systemy i Sieci &
+  \tech{Linux}{Debian/Ubuntu -- administracja, pakiety, uprawnienia, cron, diagnostyka} \\
+  & \tech{TCP/IP}{DNS, DHCP, VLAN, VLSM, routing OSPF/RIP, firewall/iptables} \\
+  & \tech{Cisco}{GNS3, Packet Tracer -- konfiguracja przełączników, ACL, CCNA (w trakcie)} \\
+\textcolor{gold}{$\blacktriangleright$} Bazy i Kolejki &
+  PostgreSQL, TimescaleDB, DuckDB, Redis, Kafka, RabbitMQ, MySQL, SQLite \\
+\textcolor{gold}{$\blacktriangleright$} Monitoring i Frontend &
+  Prometheus, Grafana, React 18, Vite, WebSocket, HTML/CSS \\
+\textcolor{gold}{$\blacktriangleright$} Narzędzia &
+  Git (branching, merge, rebase), Wireshark, Postman, IoT (Raspberry Pi, ESP32)
+\end{tabularx}
+
+\vspace{0.4em}
+
+% ======================== PROJEKTY ========================
+\section{Projekty własne}
+
+\small
+\projecttitle{CloudBudget} \hfill \href{https://github.com/Gorski-Maciej/PROJEKTS-WORK/tree/main/cloudbudget}{\textcolor{goldDark}{github.com/Gorski-Maciej/PROJEKTS-WORK}} \\
+\textit{FastAPI, PostgreSQL, DuckDB, RabbitMQ, Celery, Redis, React, Docker, Prometheus/Grafana} \\
+Platforma FinOps do analizy i optymalizacji kosztów chmurowych.
+\begin{itemize}
+  \item Zbudowałem API REST (FastAPI) z JWT autoryzacją, agregujące dane kosztowe z wielu źródeł
+  \item Zaimplementowałem asynchroniczne przetwarzanie analiz przez Celery/RabbitMQ -- generowanie rekomendacji ML (scikit-learn)
+  \item Dashboard w React z wizualizacją trendów; monitoring przez Prometheus + Grafana
+  \item Konteneryzacja (Docker Compose), testy pytest, CI/CD przez GitHub Actions
+\end{itemize}
+
+\vspace{0.25em}
+\projecttitle{NetGuardian} \hfill \href{https://github.com/Gorski-Maciej/PROJEKTS-WORK/tree/main/netguardian}{\textcolor{goldDark}{github.com/Gorski-Maciej/PROJEKTS-WORK}} \\
+\textit{FastAPI, Kafka, TimescaleDB, DuckDB, Redis, scikit-learn, GeoIP, Docker, Prometheus/Grafana} \\
+System SecOps/SIEM/SOAR do detekcji zagrożeń sieciowych w czasie rzeczywistym.
+\begin{itemize}
+  \item Zaprojektowałem architekturę event-driven: ingest zdarzeń przez Kafka z walidacją schematów
+  \item Zaimplementowałem silnik analizy regułowej + behawioralnej z detekcją anomalii (ML)
+  \item Wzbogaciłem dane o geo-enrichment (GeoIP) i automatyczne playbooki reakcji (SSH, honeypot)
+  \item Dashboard WebSocket w czasie rzeczywistym; alerty i metryki Prometheus
+\end{itemize}
+
+\vspace{0.25em}
+\projecttitle{NetAegis} \hfill \href{https://github.com/Gorski-Maciej/PROJEKTS-WORK/tree/main/netaegis}{\textcolor{goldDark}{github.com/Gorski-Maciej/PROJEKTS-WORK}} \\
+\textit{FastAPI, MCP (Model Context Protocol), React, WebSocket, SQLite, Redis, Docker} \\
+Dwuwarstwowy system orkiestracji agentów MCP dla automatyzacji bezpieczeństwa.
+\begin{itemize}
+  \item Zbudowałem architekturę Main MCP + Operational MCP z trzema wyspecjalizowanymi agentami: NetPulse (telemetria sieciowa), SecLog (analiza logów), NetConfig (konfiguracja urządzeń)
+  \item Komunikacja WebSocket w czasie rzeczywistym między agentami a frontendem operatorskim
+  \item Konteneryzacja z Redis jako brokerem, testy integracyjne
+\end{itemize}
+
+\vspace{0.25em}
+\projecttitle{InfraFlow} \hfill \href{https://github.com/Gorski-Maciej/PROJEKTS-WORK/tree/main/infraflow}{\textcolor{goldDark}{github.com/Gorski-Maciej/PROJEKTS-WORK}} \\
+\textit{FastAPI, TimescaleDB, Redis, Prometheus, Grafana, Docker} \\
+Platforma obserwowalności i automatyzacji operacyjnej infrastruktury.
+\begin{itemize}
+  \item Zaimplementowałem zbieranie metryk hostów (CPU, RAM, dysk, sieć) z przetwarzaniem kolejkowym (worker)
+  \item Dashboard Grafana z alertowaniem; dane time-series w TimescaleDB
+  \item Healthchecki, automatyczne skrypty diagnostyczne
+\end{itemize}
+
+\vspace{0.6em}
+
+% ======================== ŚCIEŻKA ROZWOJU ========================
+\section{Ścieżka rozwoju}
+
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{p{2cm} X}
+\dateline{09/2025}{Rozpoczęcie studiów informatycznych (spec. administracja sieci i systemów). Start z Pythonem -- pierwsze skrypty, algorytmy, Git.}
+\dateline{12/2025}{System budżetowy w Python OOP -- klasy, dziedziczenie, kategoryzacja, testy jednostkowe.}
+\dateline{02/2026}{Własna implementacja HashTable z obsługą kolizji -- zrozumienie haszowania i złożoności obliczeniowej.}
+\dateline{04/2026}{Konteneryzacja aplikacji (Docker, Dockerfile, docker-compose) -- pierwsze obrazy.}
+\dateline{06/2026}{Orkiestracja Kubernetes -- manifesty YAML, deploymenty, serwisy, secrets.}
+\dateline{08/2026}{Pipeline CI/CD -- GitHub Actions automatyzujące testy, build i deployment.}
+\dateline{09/2026}{Wdrożenie w chmurze AWS (EC2, S3) -- od obrazu po działającą aplikację.}
+\dateline{10/2026}{Przygotowania do certyfikacji Cisco CCNA -- VLAN, OSPF, konfiguracja przełączników.}
+\end{tabularx}
+
+\vspace{0.6em}
+
+% ======================== EDUKACJA ========================
+\section{Edukacja}
+
+\small
+\noindent\textbf{Informatyka} -- Wyższa Szkoła Informatyki i Zarządzania w Bielsku-Białej (studia niestacjonarne) \hfill \textcolor{graytext}{2025 -- obecnie} \\
+Specjalizacja: administracja sieci i systemów
+
+\vspace{0.6em}
+
+% ======================== JĘZYKI ========================
+\section{Języki}
+
+\small
+\begin{tabularx}{\textwidth}{p{3.5cm} X}
+\textbf{Polski} & ojczysty \\
+\textbf{Angielski} & B1/B2 -- dokumentacja techniczna, tutoriale, literatura branżowa w języku angielskim
+\end{tabularx}
+
+\vspace{0.6em}
+
+% ======================== INICJATYWY I KIERUNKI ROZWOJU ========================
+\section{Inicjatywy i kierunki rozwoju}
+
+\small
+\begin{itemize}[leftmargin=*, nosep]
+  \item \textbf{Cisco CCNA} -- samodzielne przygotowanie do certyfikacji: TCP/IP, VLAN, routing OSPF, konfiguracja przełączników (GNS3, Packet Tracer); planowane podejście w 2026 r.
+  \item \textbf{GitHub} -- regularne commity, otwarte repozytoria z kodem Pythona, manifestami K8s, pipeline'ami CI/CD i dokumentacją
+  \item \textbf{Kursy online} -- Cisco Networking Academy, Linux Administration, Docker \& Kubernetes: The Practical Guide, Python Developer (testowanie, FastAPI, Flask)
+  \item \textbf{IoT} -- praktyczne eksperymenty z Raspberry Pi i ESP32, integracja czujników, automatyzacja domowa
+  \item \textbf{Język angielski} -- aktywne korzystanie z anglojęzycznej dokumentacji technicznej i literatury branżowej
+\end{itemize}
+
+\end{document}
