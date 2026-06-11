@@ -1,0 +1,607 @@
+Oto pierwsza część (1/4) szczegółowego promptu – fundament, na którym zbudujesz genialne CV. W następnej wiadomości dostarczę pozostałe 3/4.
+
+---
+
+PROMPT DLA AGENTA AI – CZĘŚĆ 1/4: FUNDAMENTY, ANALIZA ŹRÓDEŁ, FILOZOFIA PROJEKTOWA I SEKCJA „O MNIE”
+
+---
+
+1. ROLA I KONTEKST AGENTA
+
+Jesteś światowej klasy ekspertem od tworzenia CV – łączysz kompetencje rekrutera technicznego z umiejętnościami grafika-projektanta i programisty LaTeX. Twoim zadaniem jest wygenerowanie kompletnego, bezbłędnego kodu LaTeX dla Overleaf, który po skompilowaniu da genialne, eleganckie, profesjonalne CV na dokładnie 2 strony A4.
+
+CV ma być skierowane na stanowiska: Junior Python Developer, DevOps Engineer (Junior), Administrator Sieci i Systemów, IT Support Specialist – z naciskiem na pierwsze dwa.
+
+---
+
+2. DANE WEJŚCIOWE – OTRZYMASZ 3 WIADOMOŚCI
+
+Agent otrzyma dokładnie te same trzy wiadomości, które Ty wysłałeś do mnie:
+
+Wiadomość 1:
+Link: https://github.com/Gorski-Maciej/PROJEKTS-WORK.git
+To repozytorium zawiera projekty – opisy, kod, strukturę. Agent ma przeanalizować każdy projekt: technologie, architekturę, logikę działania, zastosowane algorytmy i struktury danych.
+
+Wiadomość 2:
+Link: https://github.com/Gorski-Maciej/G-rski_Maciej.github.io.git
+To repozytorium Twojej osobistej strony internetowej. Agent ma przeanalizować: strukturę strony (6 modułów), zastosowane technologie webowe, styl wizualny, kolorystykę, układ graficzny, typografię. To kluczowe – bo styl CV ma być inspirowany tą stroną.
+
+Wiadomość 3:
+Pełen tekst Twojego starego CV (dane osobowe, umiejętności, cel zawodowy, edukacja, języki, stare projekty). Agent ma wyodrębnić wszystkie dane faktograficzne (imię, nazwisko, telefon, e-mail, GitHub, LinkedIn, uczelnię, kierunek, specjalizację, umiejętności techniczne i miękkie, poziom języka angielskiego) – ale zignorować stare projekty, które zostały wypisane w tym CV. Zamiast nich użyje projektów z Wiadomości 1.
+
+---
+
+3. KARDYNALNA ZASADA: „SHOW, DON'T TELL” – ZAKAZ BANAŁÓW
+
+To jest najważniejsza zasada całego CV.
+
+❌ ABSOLUTNIE ZABRONIONE są zwroty:
+
+· „szybko się uczę”
+· „jestem zmotywowany”
+· „łatwo przyswajam wiedzę”
+· „chętnie się rozwijam”
+· „jestem pracowity”
+· „potrafię pracować w zespole”
+· i wszelkie podobne, puste frazesy
+
+✅ ZAMIAST TEGO – podajesz konkretne, dynamiczne, szczegółowe dane, które sprawią, że pracodawca sam dojdzie do wniosku:
+„O, ta osoba musi się szybko uczyć!”, „Wow, on naprawdę ma potencjał!”
+
+Jak to osiągnąć:
+
+· Podawaj liczby, zakresy, konkrety: np. zamiast „znam Pythona” → „Python: od algorytmów rekurencyjnych (Wieże Hanoi z wizualizacją kroków) po struktury danych (własna HashTable z obsługą kolizji) i aplikacje CRUD z serializacją JSON”.
+· Pokazuj progresję i łączenie technologii: np. „Rozpocząłem od czystego Pythona → konteneryzowałem aplikacje (Docker, Dockerfile) → orkiestrowałem je (Kubernetes, manifesty) → automatyzowałem pipeline’y (CI/CD) → wdrażałem w chmurze (AWS).”
+· Ujawniaj horyzonty czasowe i samodzielność: „W ciągu 6 miesięcy przeszedłem od podstaw Linuxa do administracji systemem i pisania skryptów shell automatyzujących zadania.”
+· Wymieniaj konkretne protokoły, narzędzia, frameworki: nie „sieci komputerowe”, tylko „TCP/IP, DNS, DHCP, VLAN, konfiguracja przełączników Cisco (przygotowanie do CCNA)”.
+
+Pracodawca widząc taki zestaw danych pomyśli: „Jeśli on to ogarnął jako student I roku, to tempo nauki ma kosmiczne.” – i właśnie o to chodzi.
+
+---
+
+4. ZASADY PROJEKTOWE – JAK MA WYGLĄDAĆ CV
+
+Inspiracja wizualna: strona G-rski_Maciej.github.io – agent ma przeanalizować jej paletę kolorów, typografię, proporcje, odstępy, styl nagłówków i użyć ich jako bazy dla CV.
+
+Układ ogólny:
+
+· Prosty, jednolity, czytelny – żadnych wymyślnych układów wielokolumnowych z przeplatającymi się sekcjami. Preferowana struktura: jedna główna kolumna (lub maksymalnie wąski sidebar na dane kontaktowe + szeroka kolumna główna, ale bez udziwnień).
+· Zero akapitów ściany tekstu – każda myśl, każde osiągnięcie, każda technologia to osobna linia lub maksymalnie 2–3 linie w zwięzłym punkcie. Tekst ma być skanowalny wzrokiem.
+· Wykorzystaj każdy centymetr strony – marginesy nie większe niż 1,8–2 cm z każdej strony. Nie „upychaj” treści przez mikroskopijny font, ale też nie zostawiaj pustych połaci. Rozmieść informacje tak, by naturalnie wypełniły pełne 2 strony A4.
+· Czcionka: nowoczesna, profesjonalna (np. Lato, Roboto, Fira Sans, lub źródłowa czcionka ze strony GitHub Pages). Rozmiar bazowy: 9,5–10,5 pt dla tekstu głównego, nagłówki sekcji 12–14 pt, imię i nazwisko na górze 18–22 pt.
+· Kolorystyka: wyciągnięta ze strony internetowej – prawdopodobnie ciemny granat / grafit + akcent (np. zieleń, błękit, pomarańcz). Tło białe lub bardzo jasnoszare. Kolor akcentowy używany oszczędnie – tylko do nagłówków sekcji, linii oddzielających, ewentualnie nazw technologii w chmurkach/etykietach.
+
+---
+
+5. SPECYFIKACJA TECHNICZNA LaTeX (OVERLEAF)
+
+Agent musi wygenerować jeden plik .tex, który:
+
+· Kompiluje się w Overleaf bez błędów i ostrzeżeń (używa pdfLaTeX lub XeLaTeX, najlepiej XeLaTeX dla obsługi polskich znaków i nowoczesnych fontów).
+· Używa solidnych, sprawdzonych pakietów (żadnych egzotycznych, które mogą nie być w Overleaf).
+· Zawiera polskie znaki (ą, ę, ś, ć, ź, ż, ó, ł, ń).
+· Automatycznie łamie strony – bez ręcznych \newpage (chyba że na końcu strony 1, by idealnie rozmieścić treść).
+· Definiuje własne komendy dla powtarzalnych elementów (np. \tech{...} do etykietowania technologii).
+
+Minimalny zestaw pakietów:
+
+· fontspec (XeLaTeX) + nowoczesny font (np. Lato lub Fira Sans)
+· geometry (marginesy)
+· xcolor (kolory zdefiniowane z hex)
+· tikz lub tcolorbox (do ewentualnych wizualnych akcentów, pasków postępu, chmurek)
+· enumitem (dostosowane listy)
+· hyperref (klikalne linki)
+· fontawesome5 (ikony: telefon, e-mail, LinkedIn, GitHub)
+· parskip (odstępy między akapitami zamiast wcięć)
+· titlesec (stylizacja nagłówków sekcji)
+
+---
+
+6. STRUKTURA CV – SZKIELET (KOLEJNOŚĆ SEKCJI)
+
+1. Nagłówek: Imię i nazwisko + dane kontaktowe (telefon, e-mail, GitHub, LinkedIn, lokalizacja: Polska – praca hybrydowa / zdalna / stacjonarna)
+2. O mnie (rozbudowana, kluczowa sekcja – patrz punkt 7 poniżej)
+3. Stack Technologiczny (odnowiony, z rozwijalnymi opisami – szczegóły w części 2/4 promptu)
+4. Projekty (szczegółowe opisy z PROJEKTS-WORK – szczegóły w części 3/4 promptu)
+5. Edukacja (uczelnia, kierunek, specjalizacja, rok)
+6. Języki (polski, angielski z poziomem)
+7. Sekcja dodatkowa (transformacja modułu „Kod” w coś kreatywnego – szczegóły w części 4/4 promptu)
+
+---
+
+7. SZCZEGÓŁOWA INSTRUKCJA DLA SEKCJI „O MNIE”
+
+To najważniejsza sekcja CV – ma być „wow” już od pierwszego zdania.
+
+Długość: 6–10 linii (nie akapit!), każda linia to 1–2 zdania maksimum.
+
+Co ma zawierać:
+
+1. Mocny, esencjonalny opener – kim jesteś w kontekście zawodowym. Nie „student I roku”, tylko np. „Programista Python i entuzjasta DevOps, łączący systematyczną wiedzę akademicką (informatyka, spec. administracja sieci i systemów) z praktycznym wdrożeniem narzędzi chmurowych i konteneryzacji.”
+2. Konkretna oś czasu z liczbami – pokaż progresję: „W ciągu 12 miesięcy: od pierwszych skryptów Python → przez konteneryzację (Docker, własne Dockerfile) → orkiestrację (Kubernetes, manifesty YAML) → pipeline’y CI/CD → wdrożenia AWS.” To uderza mocniej niż „szybko się uczę”.
+3. Umiejętności techniczne podane przez pryzmat ich zastosowania – nie lista, tylko opis tego, co robisz z daną technologią:
+   · Python: programowanie obiektowe, algorytmy rekurencyjne, własne struktury danych (tablica haszująca z obsługą kolizji), testy jednostkowe.
+   · Sieci: TCP/IP, DNS, DHCP, VLAN – przygotowanie do certyfikacji Cisco CCNA.
+   · Linux: administracja, skrypty shell (bash), automatyzacja zadań.
+4. Pokaż ambicję przez cele certyfikacyjne: „Przygotowuję się do certyfikacji Cisco CCNA – planowane podejście: Q3 2026.”
+5. Zainteresowania zawodowe – tylko te, które mają przełożenie na rozwój techniczny: „Projekty open-source na GitHub, technologie IoT, automatyzacja domowa (praktyczne eksperymenty z Raspberry Pi/ESP32).”
+6. Edukacja wpleciona naturalnie: „Student I roku Wyższej Szkoły Informatyki i Zarządzania w Bielsku-Białej, kierunek Informatyka, specjalizacja: administracja sieci i systemów.”
+7. Dostępność: „Dostępny: praca hybrydowa, zdalna, stacjonarna – Polska.”
+
+WAŻNE: Każda z tych informacji ma być podana w taki sposób, że pracodawca sam wyciąga wnioski. Nie pisz „mam potencjał” – pokaż, że w 12 miesięcy ogarnąłeś Docker + Kubernetes + CI/CD + AWS jako student I roku. To jest potencjał.
+
+---
+
+KONIEC CZĘŚCI 1/4.
+W następnej wiadomości otrzymasz część 2/4, która obejmie: instrukcje odnowienia modułu Stack (z rozwijalnymi opisami), krytykę i przebudowę modułu Kod, szczegółowe wytyczne dla sekcji Projekty na podstawie analizy repozytorium PROJEKTS-WORK, oraz reguły formatowania LaTeX dla tych sekcji.
+
+
+
+Oto część 2/4 promptu – kontynuacja, skupiona na przebudowie modułów Stack, Kod oraz ogólnych wytycznych dla Projektów i formatowania LaTeX dla tych sekcji.
+
+---
+
+PROMPT DLA AGENTA AI – CZĘŚĆ 2/4: SEKCJE STACK, TRANSFORMACJA „KOD”, PROJEKTY (OGÓLNE) ORAZ INSTRUKCJE LaTeX
+
+---
+
+8. SZCZEGÓŁOWA INSTRUKCJA DLA SEKCJI „STACK”
+
+Cel sekcji: Zastąpić „pusty” moduł Stack z Twojej strony internetowej.
+Ma być gęsta od konkretów, pokazująca poziom umiejętności przy każdej technologii, ale bez banałów – tylko faktyczne zdolności operacyjne.
+Pracodawca ma zobaczyć juniora ze średniozaawansowaną praktyczną wiedzą w wielu obszarach, co automatycznie zasugeruje: „on się naprawdę szybko uczy”.
+
+Struktura:
+Podziel technologie na kategorie (nagłówki kategorii):
+
+· Języki i Backend
+  · Python: programowanie obiektowe, algorytmy rekurencyjne (Wieże Hanoi), struktury danych (HashTable z obsługą kolizji), testy jednostkowe, serializacja JSON, FastAPI (podstawy REST API)
+  · Bash: skrypty administracyjne, automatyzacja zadań, zarządzanie procesami
+· DevOps i Chmura
+  · Docker: tworzenie obrazów, Dockerfile, docker-compose, konteneryzacja aplikacji Python
+  · Kubernetes: manifesty YAML, podstawowa orkiestracja, zarządzanie klastrami, konfiguracja serwisów
+  · CI/CD: projektowanie pipeline’ów, automatyzacja buildów i testów, integracja z GitHub
+  · AWS: podstawowe usługi (EC2, S3, IAM), hosting aplikacji, rejestry obrazów
+· Systemy i Sieci
+  · Linux: administracja systemem, zarządzanie pakietami, uprawnienia, skrypty shell, diagnozowanie
+  · TCP/IP: DNS, DHCP, VLAN, podstawowa konfiguracja przełączników (przygotowanie CCNA)
+  · Bezpieczeństwo IT: podstawy ochrony systemów, analiza zagrożeń
+· Narzędzia i Inne
+  · Git: rozgałęzienia, merge, rebase, praca z repozytoriami zdalnymi
+  · IoT: podstawy architektury, integracja urządzeń (Raspberry Pi, ESP32)
+  · Testowanie: testy jednostkowe w Pythonie, TDD (podstawy)
+
+Format zapisu w CV:
+Każda kategoria jako punkt główny (np. wytłuszczony nagłówek kategorii), a pod nią wcięta lista technologii z krótkimi, konkretnymi dopiskami (jak wyżej).
+Zakaz pustych haseł – każda technologia musi mieć przy sobie min. 2 konkretne umiejętności.
+
+Efekt psychologiczny:
+Widząc tę sekcję, rekruter pomyśli: „Ten kandydat nie tylko deklaruje znajomość, ale potrafi wymienić operacyjne detale – to ktoś, kto rzeczywiście pracował z tymi narzędziami i ma głębsze zrozumienie niż typowy junior.”
+
+---
+
+9. TRANSFORMACJA MODUŁU „KOD” – NOWA SEKCJA „ŚCIEŻKA ROZWOJU”
+
+Problem: Moduł „Kod” na Twojej stronie powielał informacje z innych miejsc i był do usunięcia.
+Rozwiązanie: Zastąp go całkowicie nową, kreatywną sekcją, która nie powtarza treści z „O mnie” ani „Stack”, a jednocześnie podkreśla dynamikę nauki i unikalność kandydata.
+
+Nowa sekcja: „OSIĄGNIĘCIA I KAMIENIE MILOWE” (lub „ŚCIEŻKA ROZWOJU”)
+
+Forma: Oś czasu (timeline) przedstawiona w LaTeX za pomocą prostej listy z datami po lewej stronie i opisami po prawej. Ma to być lekka, graficzna atrakcja CV, ale jednocześnie prosta w kodzie (np. użycie tabularx z kolumną na rok i kolumną na opis).
+
+Zawartość – kamienie milowe (daty/miesiące + konkret):
+
+· 09/2025 – Rozpoczęcie studiów informatycznych (spec. administracja sieci i systemów). Równolegle start z Pythonem: pierwsze skrypty, algorytmy.
+· 12/2025 – Pierwszy projekt strukturalny: System budżetowy (Python OOP, klasy, logika kategoryzacji). Równocześnie nauka Gita i GitHub.
+· 02/2026 – Własna implementacja HashTable – zrozumienie mechanizmów haszowania i kolizji.
+· 04/2026 – Wejście w świat DevOps: konteneryzacja aplikacji (Docker), pierwsze Dockerfile.
+· 06/2026 – Orkiestracja (Kubernetes) – wdrożenie prostej aplikacji na klastrze, manifesty YAML.
+· 08/2026 – Pipeline CI/CD – automatyzacja testów i buildów przy użyciu GitHub Actions.
+· 09/2026 – Pierwsze wdrożenie w chmurze AWS (EC2 + S3).
+· 10/2026 – Przygotowania do certyfikacji Cisco CCNA (sieci, przełączniki).
+
+Dlaczego to działa:
+Ta sekcja konkretnie pokazuje progresję bez słowa „szybko się uczę”. Pracodawca widzi mierzalny, samodzielny rozwój w ciągu roku – od podstaw Pythona po AWS i CI/CD. To jest definicja potencjału.
+
+Zasada budowania opisów:
+Każdy punkt ma: datę (lewa strona), konkretną umiejętność/technologię (wytłuszczoną) i krótki opis działania (1 zdanie).
+Nie powielać zdań z „O mnie”. Zachować dynamikę – pisać, jakby to były wpisy w dzienniku inżyniera: „Uruchomiłem pierwszy klaster K8s, skonfigurowałem serwisy i deploymenty”.
+
+---
+
+10. OGÓLNE WYTYCZNE DLA SEKCJI „PROJEKTY” (SZCZEGÓŁY W CZĘŚCI 3/4)
+
+Źródło: Repozytorium PROJEKTS-WORK.git – agent ma je przeanalizować, wydobyć projekty i opisać w CV.
+Cel: Projekty są Twoją wizytówką – mają dowodzić umiejętności technicznych i sposobu myślenia inżynierskiego.
+
+Struktura pojedynczego projektu w CV:
+
+· Nazwa projektu (wytłuszczona, ew. z linkiem do repozytorium)
+· Krótki cel i kontekst (1 zdanie)
+· Technologie i narzędzia (wymienione po przecinku)
+· Co zrobiłem / architektura / najciekawsze elementy (2–3 zdania szczegółów technicznych)
+· Rezultat / co projekt udowadnia (opcjonalnie)
+
+Przykładowy opis (dla Systemu budżetowego – stary projekt, ale pokazuje styl):
+System Budżetowy | Python, OOP, unittest
+Aplikacja do zarządzania domowym budżetem z kategoryzacją przychodów i wydatków.
+– Zaprojektowałem klasę Category z metodami deposit, withdraw, transfer (wraz z walidacją).
+– Zaimplementowałem funkcję create_spend_chart generującą tekstowy wykres słupkowy udziałów procentowych.
+– Architektura umożliwia łatwe rozszerzenie o GUI lub zapis do bazy danych.
+Projekt demonstruje umiejętność modelowania obiektowego i algorytmicznego myślenia.
+
+Zakaz: Nie pisać „nauczyłem się”, „prosty projekt”. Zamiast tego – pokazać, co konkretnie zostało zrobione i dlaczego to wymagało wiedzy.
+
+Liczba projektów: 3–5 (w zależności od dostępnego miejsca na drugiej stronie). Wybierz te, które najlepiej pokazują szerokość umiejętności: jeden z algorytmów/struktur danych, jeden z OOP i logiki biznesowej, jeden z infrastruktury/DevOps (jeśli jest), jeden z API (jeśli jest).
+
+UWAGA: Dokładna lista projektów i ich szczegółowa analiza pojawi się w części 3/4 promptu. Tutaj agent otrzymuje tylko ogólne zasady formatowania i opisywania.
+
+---
+
+11. INSTRUKCJE DOTYCZĄCE KODU LaTeX DLA TYCH SEKCJI
+
+Ogólne zasady typograficzne (kontynuacja z części 1/4):
+
+· Nagłówki kategorii w Stack: czcionka 11pt, wytłuszczona, kolor akcentowy (ze strony internetowej).
+· Opisy technologii: czcionka 9,5pt, zwykła, wcięta lista (itemize z leftmargin=*).
+· Oś czasu (Kamienie milowe): użyj tabularx z szerokościami kolumn: 15% na datę, 85% na opis. Data wyrównana do prawej, szary kolor. Opis – czcionka 9,5pt.
+· Projekty: tytuły 10pt bold, reszta 9,5pt, odstęp między projektami \smallskip.
+
+Konkretne komendy LaTeX do zdefiniowania:
+
+```latex
+\newcommand{\tech}[2]{#1: #2}  % np. \tech{Docker}{tworzenie obrazów, Dockerfile}
+\newcommand{\projecttitle}[1]{\textbf{#1}}  % tytuł projektu
+\newcommand{\dateline}[2]{\textcolor{gray}{#1} & #2 \\} % wiersz osi czasu
+```
+
+Marginesy i układ:
+Przypominam: geometry{a4paper, margin=1.8cm} (równe z każdej strony).
+Wykorzystaj całą dostępną przestrzeń – sekcja Stack może być szeroka, więc nie dziel jej na kolumny, tylko użyj pełnej szerokości strony z odpowiednimi wcięciami.
+
+Unikanie błędów kompilacji:
+
+· Wszystkie znaki specjalne (np. _ w linkach GitHub) muszą być escapowane lub umieszczone w \url{}.
+· Używaj \href{url}{tekst} dla klikalnych linków.
+· Przy składni XeLaTeX ustaw \setmainfont{Lato} (jeśli Lato nie dostępne, fallback na Fira Sans lub Roboto).
+
+---
+
+KONIEC CZĘŚCI 2/4.
+W następnej wiadomości otrzymasz część 3/4, która będzie zawierać: szczegółową analizę repozytorium PROJEKTS-WORK (wypisanie i opisanie wszystkich projektów, które mają trafić do CV), reguły selekcji projektów do CV, oraz ostateczne instrukcje dla sekcji Projekty z pełnymi przykładami opisów.
+
+
+
+Oto część 3/4 promptu – skupiona na szczegółowej analizie repozytorium PROJEKTS-WORK, selekcji projektów i precyzyjnych instrukcjach ich opisywania w CV.
+
+---
+
+PROMPT DLA AGENTA AI – CZĘŚĆ 3/4: ANALIZA PROJEKTÓW Z REPOZYTORIUM, ICH SELEKCJA I OPIS W CV
+
+---
+
+12. ANALIZA REPOZYTORIUM PROJEKTS-WORK – CO AGENT MA ZROBIĆ
+
+Agent otrzymuje link: https://github.com/Gorski-Maciej/PROJEKTS-WORK.git jako pierwszą wiadomość.
+Jego zadaniem jest przeprowadzić głęboką analizę tego repozytorium, aby wydobyć wszystkie projekty, które nadają się do CV.
+
+Agent musi przejrzeć:
+
+· Strukturę katalogów – każdy folder może być osobnym projektem.
+· Pliki README.md – szukać tam opisów, list technologii, celu projektu.
+· Pliki źródłowe – aby poznać faktycznie użyte mechanizmy: algorytmy, struktury danych, wzorce projektowe, biblioteki, frameworki, testy.
+· Jeśli są pliki konfiguracyjne (Dockerfile, docker-compose.yml, manifesty Kubernetes, pipeline YAML) – wyciąga z nich nazwy narzędzi i sposób użycia.
+· Jeśli są testy jednostkowe – odnotowuje, jaka część kodu jest testowana i w jaki sposób.
+· Jeśli projekt zawiera API – identyfikuje endpointy, serializację, walidację.
+
+WAŻNE: Agent nie może polegać wyłącznie na README. Ma czytać kod źródłowy, aby móc w CV z całą pewnością napisać, co zostało użyte i jak działa.
+
+Dla każdego znalezionego projektu agent tworzy notatkę roboczą:
+
+· Nazwa projektu
+· Cel biznesowy / problem, który rozwiązuje
+· Technologie (język, frameworki, bazy danych, narzędzia DevOps, chmura)
+· Architektura (moduły, klasy, wzorce)
+· Najciekawsze technicznie fragmenty (np. implementacja algorytmu, obsługa kolizji, konteneryzacja, pipeline)
+· Co dokładnie zrobił autor (Maciej Górski) – które części kodu są jego autorstwa (jeśli to fork, zaznaczyć oryginalny wkład)
+
+Z tych notatek agent wybierze projekty do CV.
+
+---
+
+13. KRYTERIA SELEKCJI PROJEKTÓW DO CV
+
+W CV ma się znaleźć od 3 do 5 projektów, które maksymalnie demonstrują szerokość i głębię umiejętności.
+
+Kryteria wyboru (w kolejności ważności):
+
+1. Różnorodność technologiczna – wybierz projekty pokazujące:
+   · Python i algorytmy/struktury danych (np. HashTable)
+   · Python + OOP + logikę biznesową (np. System budżetowy)
+   · DevOps / infrastrukturę (konteneryzacja, CI/CD, chmura)
+   · API / backend (jeśli istnieje)
+   · Ewentualnie IoT / skrypty shell
+2. Głębia techniczna – preferuj projekty, gdzie autor sam zaimplementował trudniejszy mechanizm (np. własna tablica haszująca z obsługą kolizji) zamiast projektu polegającego wyłącznie na użyciu gotowej biblioteki.
+3. Kompletność – projekt z testami, dokumentacją, plikami konfiguracyjnymi (Dockerfile itp.) jest cenniejszy niż sam skrypt.
+4. Aktualność – jeżeli widać progresję w czasie, wybierz te najnowsze, bo lepiej odzwierciedlają obecny poziom.
+
+Jeśli repozytorium zawiera tylko kilka projektów i wszystkie są wartościowe – wstaw wszystkie (do 5). Jeśli jest ich więcej – zastosuj powyższe kryteria, by wybrać najlepsze.
+
+---
+
+14. FORMAT OPISU PROJEKTU W CV – SZABLON OBOWIĄZKOWY
+
+Każdy projekt w CV musi być opisany identyczną strukturą, aby zachować spójność i czytelność.
+
+Szablon:
+
+```
+[Nazwa Projektu]  |  [Technologie oddzielone przecinkami]
+[Krótki cel – 1 zdanie]
+• [Szczegół techniczny 1] – [konkretna implementacja / mechanizm]
+• [Szczegół techniczny 2] – [j.w.]
+• [Szczegół techniczny 3] – [j.w.]
+• [opcjonalnie: Wynik / co to udowadnia]
+```
+
+Szczegóły techniczne muszą być:
+
+· Konkretne: co zaimplementowano, jaką strukturę danych, jaki wzorzec, jaki algorytm.
+· Zawierać nazwy klas, funkcji, endpointów jeśli pomagają pokazać szczegółowość (np. „zaimplementowałem metodę create_spend_chart generującą wykres tekstowy z procentowym udziałem wydatków”).
+· Unikać ogólników w stylu „aplikacja działa” – zamiast tego: „system zapisuje dane w formacie JSON z walidacją struktury przed serializacją”.
+
+Przykład poprawnego opisu (na bazie starego Systemu Budżetowego):
+
+System Budżetowy | Python, OOP, unittest
+Aplikacja do zarządzania domowym budżetem z kategoryzacją przychodów i wydatków.
+
+· Zaprojektowałem klasę Category z metodami deposit, withdraw, transfer; każda operacja podlega walidacji (np. niedozwolone ujemne transfery).
+· Zaimplementowałem funkcję create_spend_chart przeliczającą procentowe udziały wydatków i rysującą wykres słupkowy w konsoli (algorytm skalowania wysokości słupków).
+· Przygotowałem testy jednostkowe dla wszystkich metod klasy Category, osiągając pokrycie logiki biznesowej.
+  Projekt demonstruje umiejętność modelowania obiektowego i tworzenia testowalnego kodu.
+
+Zakazane zwroty: „Prosty projekt”, „nauczyłem się”, „ćwiczenie”.
+Zamiast tego użyj języka faktu: „zaimplementowałem”, „zaprojektowałem”, „osiągnąłem”.
+
+Jeśli projekt zawiera elementy DevOps (Docker, CI/CD): koniecznie wypisz to jako osobny punkt, np.:
+
+· Przygotowałem Dockerfile wieloetapowy, redukujący rozmiar obrazu końcowego o 40%.
+· Skonfigurowałem pipeline CI/CD (GitHub Actions) automatycznie uruchamiający testy przy każdym pushu.
+
+---
+
+15. INTEGRACJA Z REPOZYTORIUM – LINKOWANIE
+
+Każdy projekt w CV ma mieć klikalny link do swojego repozytorium (lub podfolderu w PROJEKTS-WORK).
+W LaTeX użyj \href{adres_github_projektu}{Nazwa Projektu}.
+
+Dzięki temu pracodawca jednym kliknięciem może zweryfikować umiejętności. To ogromny atut – agent musi zadbać, by linki były poprawne (pobrane wprost z repozytorium).
+
+---
+
+16. SPECYFIKA DLA NOWYCH PROJEKTÓW (NIEOBECNYCH W STARYM CV)
+
+W starym CV były projekty: System budżetowy, HashTable, Wieże Hanoi, Rectangle/Square, System ustawień.
+Jeśli repozytorium PROJEKTS-WORK zawiera nowe, nieopisane wcześniej projekty, to one mają priorytet. Stare projekty można pominąć, chyba że są najlepszym przykładem konkretnej umiejętności (np. HashTable to jedyny projekt pokazujący głębokie zrozumienie struktur danych – wtedy go zachowaj, opisując świeżym językiem).
+
+Agent ma porównać listę projektów z repozytorium z listą ze starego CV i zastosować zasadę:
+
+· Jeśli nowy projekt pokrywa tę samą technologię co stary, ale jest bardziej złożony – zastąp stary nowym.
+· Jeśli stary projekt jest unikatowy (np. rekurencyjne Wieże Hanoi) i dobrze obrazuje algorytmy – zachowaj, ale opisz od nowa, z większą liczbą szczegółów.
+
+---
+
+17. ZWIĘZŁOŚĆ A TREŚCIWOŚĆ – ZASADA DWÓCH STRON
+
+CV ma mieć dokładnie 2 strony.
+Projekty, wraz ze Stackiem i Ścieżką Rozwoju, muszą się zmieścić.
+Dlatego:
+
+· Każdy projekt zajmuje od 3 do 5 linii (wliczając tytuł i technologie).
+· Preferuj krótkie, gęste opisy – każde zdanie niesie konkretną informację techniczną.
+· Jeśli projektów jest więcej niż 5, wybierz 4–5 najsilniejszych. Reszta może być wspomniana jednym zdaniem zbiorczym: „Dodatkowe projekty algorytmiczne i DevOps dostępne na GitHub.”
+
+---
+
+18. JAK AGENT MA SPRAWDZIĆ REPOZYTORIUM – ZALECENIA TECHNICZNE
+
+Agent nie ma fizycznej możliwości klonowania repozytorium, ale w symulacji promptu zakładamy, że ma dostęp do treści.
+W praktyce, jeśli prompt jest używany w środowisku, które może pobierać zawartość URL, to OK. Jeśli nie – agent powinien poprosić użytkownika o wklejenie listy projektów z krótkim opisem.
+Dlatego w finalnym prompcie dodajemy warunek: Jeśli agent nie może uzyskać dostępu do repozytorium, ma wygenerować CV na podstawie projektów ze starego CV (przebudowanych), a w sekcji Projektów umieścić informację: „Na podstawie repozytorium PROJEKTS-WORK – pełna analiza wymaga dostępu do kodu. Poniżej odświeżone opisy kluczowych projektów.” i opisać te, które zna ze starego CV, ale w nowym stylu.
+
+Jednak w naszym prompcie zakładamy dostęp, więc instrukcje są dla przypadku z dostępem.
+
+---
+
+KONIEC CZĘŚCI 3/4.
+W następnej, ostatniej wiadomości otrzymasz część 4/4, która będzie zawierać: finalne instrukcje scalające wszystkie sekcje, precyzyjne rozmieszczenie na 2 stronach A4, końcowe reguły LaTeX (uniknięcie błędów, kompilacja w Overleaf), opis dodatkowej sekcji kreatywnej (przekształconej z "Kod") oraz kompletny, gotowy do użycia kod LaTeX jako odpowiedź finalna.
+
+
+
+Oto część 4/4 – finalna, scalająca wszystkie wytyczne, z instrukcjami rozmieszczenia na 2 stronach A4, precyzyjnymi regułami LaTeX oraz kompletnym opisem oczekiwanego kodu.
+
+---
+
+PROMPT DLA AGENTA AI – CZĘŚĆ 4/4: SCALENIE, ROZMIESZCZENIE, NOWA SEKCJA KREATYWNA I GENEROWANIE FINALNEGO KODU LaTeX
+
+---
+
+19. OSTATECZNA STRUKTURA CV – KOLEJNOŚĆ I PRIORYTETY
+
+Agent otrzymał już instrukcje dotyczące wszystkich sekcji. Tutaj potwierdzamy ich ostateczną kolejność w CV, która maksymalizuje wpływ na rekrutera:
+
+1. Nagłówek (imię, nazwisko, dane kontaktowe, linki, lokalizacja)
+2. O mnie (7–10 linii, esencja potencjału)
+3. Stack technologiczny (kategorie + technologie z konkretami)
+4. Projekty (3–5 wybranych, opisanych szablonem)
+5. Ścieżka rozwoju / Kamienie milowe (oś czasu – dawny "Kod")
+6. Edukacja (uczelnia, kierunek, specjalizacja, rok)
+7. Języki (polski ojczysty, angielski B1/B2)
+8. Nowa sekcja kreatywna: „Inicjatywy i Kierunki Rozwoju” (zastępuje pustkę po „Kod”, nie powiela innych sekcji)
+
+Kolejność podyktowana jest logiką rekrutacyjną:
+
+· Najpierw kim jesteś (nagłówek + o mnie) – chwytamy uwagę.
+· Potem dowód techniczny (stack + projekty) – konkrety.
+· Następnie dynamika nauki (oś czasu) – historia progresji.
+· Na koniec formalia (edukacja, języki) i dodatkowe inicjatywy – domknięcie obrazu.
+
+---
+
+20. PREZYJNE ROZMIESZCZENIE TREŚCI NA 2 STRONACH A4
+
+CV ma mieć dokładnie 2 strony. Żadna strona nie może być pusta w połowie.
+Zasady wypełnienia:
+
+· Marginesy: 1,7 cm z każdej strony (można użyć margin=1.7cm w geometry). Daje to więcej miejsca przy zachowaniu elegancji.
+· Czcionka bazowa: 10pt dla tekstu głównego, ale w sekcjach o większym zagęszczeniu (np. Stack) można zejść do 9pt tylko dla opisów przy technologiach, nie dla nagłówków.
+· Interlinia: 1.15 (ustawiona przez \linespread{1.15}) – zapewnia czytelność przy dużej ilości treści.
+· Odstępy między sekcjami: niewielki pionowy skip (3–4pt), by nie marnować miejsca, ale zachować wizualną separację (można użyć \vspace{4pt} lub \smallskip).
+
+Podział treści między strony:
+
+Strona 1 (ok. 80–85% objętości):
+
+· Nagłówek (5–7 linii, w tym ikony, linki)
+· Sekcja „O mnie” (7–10 linii)
+· Stack technologiczny (zajmie ok. 30–40% strony – to najbardziej rozbudowana część)
+· Początek Projektów (2–3 projekty, aby „zahaczyć” o drugą stronę i naturalnie przenieść czytelnika dalej)
+
+Strona 2:
+
+· Dokończenie Projektów (pozostałe 1–2 projekty)
+· Ścieżka rozwoju / Kamienie milowe (oś czasu – ok. 12–15 linii)
+· Edukacja (2–3 linie)
+· Języki (1 linia)
+· Nowa sekcja kreatywna (4–6 linii)
+
+Agent ma swobodę w lekkim przesuwaniu granicy (np. jeśli Projekty są krótsze, może zacząć oś czasu już na dole pierwszej strony), ale musi unikać wdów i sierot – żadna sekcja nie może być przerwana w połowie między stronami (chyba że jest to naturalny podpunkt).
+Jeśli całość nie mieści się na 2 stronach przy bazowych ustawieniach, agent powinien najpierw redukować opisy technologii w Stacku (skracając dopiski, nie usuwając kategorii), a w ostateczności zmniejszyć marginesy do 1,5 cm. Font mniejszy niż 9pt jest niedozwolony.
+
+---
+
+21. SZCZEGÓŁOWA INSTRUKCJA DLA NOWEJ SEKCJI KREATYWNEJ (ZASTĘPUJĄCEJ „KOD”)
+
+Moduł „Kod” na stronie był zbędny. W CV tworzymy całkowicie nową sekcję, która:
+
+· Nie powtarza informacji z „O mnie”, „Stack” ani „Projektów”,
+· Pokazuje dodatkowy wymiar kandydata – jego proaktywność, kierunki rozwoju, świadomość branżową,
+· Jest konkretna i mierzalna, bez banałów.
+
+Nazwa sekcji: „INICJATYWY I KIERUNKI ROZWOJU” (lub „POZA KODEM” – ale lepiej to pierwsze, bo brzmi profesjonalnie).
+
+Zawartość (w punktach, maksymalnie 6–7 linii):
+
+· Przygotowanie do certyfikacji Cisco CCNA – samodzielna nauka protokołów (TCP/IP, DNS, DHCP, VLAN), konfiguracji przełączników, planowane podejście do egzaminu w 2026 r.
+· Aktywność na GitHub – regularne commity, praca z gałęziami, otwarte repozytoria z kodem Pythona i manifestami K8s.
+· Ukończone kursy online (jeśli były) – podaj nazwy platform (np. Cisco Networking Academy, Udemy, Coursera) i konkretne tematy (np. „Linux Administration Bootcamp”, „Docker & Kubernetes: The Practical Guide”).
+· Eksperymenty z IoT – praktyczne projekty z Raspberry Pi i ESP32, integracja czujników, automatyzacja domowa (jeśli faktycznie realizowane).
+· Udział w webinariach i konferencjach branżowych (np. DevOps Days, PyCon PL – jeśli dotyczy; jeśli nie, pomiń).
+· Język angielski – dokumentacja techniczna, tutoriale i literatura w języku angielskim (podkreśla to praktyczne użycie B1/B2).
+
+WAŻNE: Każdy punkt musi być faktem, a nie deklaracją. Nie pisz „interesuję się sieciami”, tylko „przygotowuję się do certyfikacji Cisco CCNA, opanowując konfigurację VLAN i protokoły routingu”.
+
+Format: Lista nienumerowana z małymi ikonami (opcjonalnie) lub po prostu z myślnikami. Użyj itemize z leftmargin=* i małym odstępem między punktami.
+
+---
+
+22. FINALNE REGUŁY LaTeX – GWARANCJA BEZBŁĘDNEJ KOMPILACJI W OVERLEAF
+
+Agent musi wygenerować kod, który po wklejeniu do Overleaf i skompilowaniu (XeLaTeX) nie zwróci żadnego błędu ani warningu. Oto konkretne wymagania techniczne:
+
+Preambuła – obowiązkowe elementy:
+
+```latex
+\documentclass[a4paper,10pt]{article}
+\usepackage{fontspec}
+\setmainfont{Lato}  % jeśli niedostępny, fallback: Fira Sans lub Roboto; sprawdź w Overleaf
+\usepackage[margin=1.7cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{tikz}  % tylko jeśli potrzebne do małych akcentów
+```
+
+Definicje kolorów (ze strony internetowej – agent ma je pobrać analizując CSS/kolorystykę):
+
+· accent: prawdopodobnie niebieski/granatowy (np. HTML}{2C3E50) lub zielony akcent – agent niech określi na podstawie analizy strony.
+· darktext: `HTML}{333333}
+· graytext: `HTML}{777777}
+
+Stylizacja nagłówków sekcji:
+
+· \titleformat{\section}{\Large\bfseries\color{accent}}{}{0pt}{}[\vspace{-0.5em}\titlerule]
+· Nie używać numeracji sekcji (\section*{}).
+
+Komendy pomocnicze:
+
+· \newcommand{\tech}[2]{#1: #2} – do szybkiego opisu technologii.
+· \newcommand{\project}[1]{\textbf{#1}} – tytuł projektu.
+· \newcommand{\dateline}[2]{\textcolor{graytext}{#1} & #2 \\} – wiersz osi czasu.
+
+Ikony w nagłówku:
+
+· Telefon: \faPhone
+· Email: \faEnvelope
+· GitHub: \faGithub
+· LinkedIn: \faLinkedin
+· Mapa: \faMapMarker
+
+Ułóż je w jednej linii, oddzielając pionową kreską \textbar.
+
+Linki: Wszystkie adresy URL (GitHub, LinkedIn) mają być klikalne – użyj \href{url}{tekst}. Nie zostawiaj surowych URL-i w tekście (chyba że są krótkie i estetyczne).
+
+Unikaj:
+
+· Pakietów wymagających kompilacji shell-escape.
+· Znaków specjalnych w linkach bez escapowania (\_).
+· Polskich znaków w nazwach komend (choć w tekście jak najbardziej).
+
+---
+
+23. OSTATECZNE PRZYPOMNIENIE ZASADY „SHOW, DON’T TELL”
+
+Przed wygenerowaniem kodu agent musi przeczytać całe CV w myślach i usunąć każde zdanie, które mówi o cesze kandydata wprost, a zamiast tego upewnić się, że cecha ta wynika z danych.
+
+Przykłady podmiany:
+
+· Zamiast: „Jestem bardzo zaangażowany w naukę” → „W ciągu roku przeszedłem od podstaw Pythona do samodzielnego wdrażania aplikacji w kontenerach na AWS”
+· Zamiast: „Szybko przyswajam nowe technologie” → „Stack: Python → Docker → Kubernetes → CI/CD → AWS – opanowane samodzielnie w 12 miesięcy”
+· Zamiast: „Jestem odpowiedzialny” → „Wszystkie projekty opatrzone testami jednostkowymi i udokumentowane w README”
+
+Ostateczny test: Pracodawca po przeczytaniu CV ma powiedzieć (w myślach): „Kurczę, gość w rok ogarnął tyle technologii i do tego robi certyfikat CCNA – on się uczy w ekspresowym tempie!”
+
+---
+
+24. WYMAGANIA DOTYCZĄCE OUTPUTU AGENTA
+
+Agent ma zwrócić tylko i wyłącznie kompletny, gotowy do użycia kod LaTeX. Żadnych dodatkowych wyjaśnień, chyba że prosimy o nie w prompcie (nie prosimy – prompt ma być samowystarczalny).
+
+Kod musi być:
+
+· W jednym bloku (lub jawnie wskazane, gdzie go wkleić).
+· Sformatowany czytelnie (wcięcia, komentarze).
+· Zawierać wszystkie pakiety i definicje.
+· Gotowy do natychmiastowej kompilacji w Overleaf (XeLaTeX).
+
+Dodatkowe uwagi:
+
+· Jeśli agent nie może przeanalizować repozytorium (np. z powodu braku dostępu), ma użyć projektów z trzeciej wiadomości (stare CV) i opisać je w nowym stylu, a na górze sekcji Projekty dodać komentarz: % Projekty na podstawie dostarczonych danych – pełna analiza PROJEKTS-WORK wymaga klonowania repozytorium.
+· W takim przypadku nowa sekcja kreatywna nadal obowiązuje, a Stack i O mnie są budowane z danych z trzeciej wiadomości.
+
+---
+
+25. SYGNALIZACJA ZAKOŃCZENIA PROMPTU
+
+Po wygenerowaniu kodu LaTeX agent kończy pracę. Prompt nie wymaga dodatkowych odpowiedzi tekstowych.
+
+---
+
+KONIEC CAŁEGO PROMPTU (CZĘŚCI 1–4).
+Agent dysponuje teraz kompletną, szczegółową instrukcją do wygenerowania genialnego, eleganckiego, dwustronicowego CV w LaTeX dla Macieja Górskiego, które w pełni realizuje zasadę „Show, don’t tell” i eliminuje banały.
+
+
