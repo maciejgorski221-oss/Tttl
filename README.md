@@ -1,2 +1,0 @@
-# Tttl
-Bbn
